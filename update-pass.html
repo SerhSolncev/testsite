@@ -5,20 +5,18 @@
     <title>Zoodom</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!--swiper-->
-    <link rel="stylesheet" href="js/modules/swiper.min.css">
     <!-- fonts -->
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fonts.css?v=21">
     <!-- global-->
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/global.css?v=21">
     <!-- main -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=21">
     <!-- header -->
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header.css?v=21">
     <!-- footer -->
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css?v=21">
     <!-- footer -->
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/modal.css?v=21">
 </head>
 <body>
     <!-- Header Start-->
@@ -96,7 +94,7 @@
                             Пошук
                         </div>
                         <div class="search-block__body">
-                            <label class="search-block__icon" for="search">
+                            <label class="search-block__icon" for="search2">
                                 <img src="images/icons/search.svg" alt="search" width="24" height="24">
                             </label>
                             <input type="search" name="search" id="search2" placeholder="Пошук" class="search-block__input js-search-input" autocomplete="off">
@@ -213,19 +211,19 @@
                             <div class="chat-block__title">Он-лайн чат</div>
                             <div class="chat-block__list">
                                 <a href="#!" class="chat-link" target="_blank">
-                                    <img src="images/icons/viber.svg" alt="logo" width="40" height="40">
+                                    <img src="/images/empty.gif" data-src="images/icons/viber.svg" alt="logo" width="40" height="40" class="lazy">
                                 </a>
                                 <a href="#!" class="chat-link" target="_blank">
-                                    <img src="images/icons/telega.svg" alt="logo" width="40" height="40">
+                                    <img src="/images/empty.gif" data-src="images/icons/telega.svg" alt="logo" width="40" height="40" class="lazy">
                                 </a>
                                 <a href="#!" class="chat-link" target="_blank">
-                                    <img src="images/icons/message.svg" alt="logo" width="40" height="40">
+                                    <img src="/images/empty.gif" data-src="images/icons/message.svg" alt="logo" width="40" height="40" class="lazy">
                                 </a>
                                 <a href="#!" class="chat-link" target="_blank">
-                                    <img src="images/icons/insta2.svg" alt="logo" width="40" height="40">
+                                    <img src="/images/empty.gif" data-src="images/icons/insta2.svg" alt="logo" width="40" height="40" class="lazy">
                                 </a>
                                 <a href="#!" class="chat-link" target="_blank">
-                                    <img src="images/icons/chat.svg" alt="logo" width="40" height="40">
+                                    <img src="/images/empty.gif" data-src="images/icons/chat.svg" alt="logo" width="40" height="40" class="lazy">
                                 </a>
                             </div>
                         </div>
@@ -392,10 +390,946 @@
 </header>
 <div class="mobile-menu js-hover-dropdown" data-id="mmenu">
     <div class="mobile-menu__body">
-        <div class="mobile-menu__top js-append-after">
+        <div class="mobile-menu__top">
             <div class="lang-block">
                 <a class="lang-block__link is-current">UA</a>
                 <a href="#!" class="lang-block__link">RU</a>
+            </div>
+        </div>
+        <div class="mobile-menu__categories js-acc-wrap-m">
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Ветпрепараты</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct1.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Засоби від паразитів</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Від бліх та кліщів</a>
+                            <a href="#!">Від глистів</a>
+                        </div>
+                    </div>
+                    <a href="#!" class="categ-item categ-item--mob">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt2.svg" alt="" width="32" height="32">
+                            </span>
+                        <span class="categ-item__text">Засоби для дезінсекції - від паразитів та комах в будинку</span>
+                    </a>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt3.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Лікувальні (ветеринарні, дієтичні) корми</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм для собак</a>
+                            <a href="#!">Вологий (консерви) корм для собак</a>
+                            <a href="#!">Сухий корм для котів</a>
+                            <a href="#!">Вологий (консерви) корм для котів</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Галузь застосування</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Від алергії</a>
+                            <a href="#!">Для очей</a>
+                            <a href="#!">Для шлунково-кишкового тракту</a>
+                            <a href="#!">Для імунітету</a>
+                            <a href="#!">Для шкіри та шерсті </a>
+                            <a href="#!">Для сечостатевої системи</a>
+                            <a href="#!">Для нервової системи</a>
+                            <a href="#!">Для органів дихання</a>
+                            <a href="#!">Захворювання крові</a>
+                            <a href="#!">Для  печінки</a>
+                            <a href="#!">Для порожнини рота</a>
+                            <a href="#!">Для  нирок</a>
+                            <a href="#!">Для серця</a>
+                            <a href="#!">Для кісток та суглобів</a>
+                            <a href="#!">Для вух</a>
+                            <a href="#!">Захворювання крові</a>
+                            <a href="#!">Від запалень та болю</a>
+                            <a href="#!">Від копрофагії</a>
+                            <a href="#!">Від ран та порізів</a>
+                            <a href="#!">Регуляція статевої активності</a>
+                            <a href="#!">Інші види захворювань</a>
+                            <a href="#!">Для виведення шерсті</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt5.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Витратні та післяопераційні матеріали</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Памперси (підгузки), трусики і пояси</a>
+                            <a href="#!">Пелюшки</a>
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Сухий корм</a>
+                        </div>
+                    </div>
+                    <a href="#!" class="categ-item categ-item--mob">
+                        <span class="categ-item__icon">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt6.svg" alt="" width="32" height="32">
+                        </span>
+                        <span class="categ-item__text">Засоби для дезінфекції</span>
+                    </a>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/vt/vt7.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Категорія вет препарату</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Анальгетики</a>
+                            <a href="#!">Анестетики</a>
+                            <a href="#!">Антибіотики</a>
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Антигістамінні</a>
+                            <a href="#!">Антисептики</a>
+                            <a href="#!">Вітаміни та мінерали</a>
+                            <a href="#!">Аксесуари</a>
+                            <a href="#!">Гепатопротектори</a>
+                            <a href="#!">Гомеопатія</a>
+                            <a href="#!">Гормональні препарати</a>
+                            <a href="#!">Діуретики (сечогінні)</a>
+                            <a href="#!">Імуностимулятори</a>
+                            <a href="#!">Кардіологічні препарати</a>
+                            <a href="#!">Контрацептиви та від хибної щеності</a>
+                            <a href="#!">Харчові добавки</a>
+                            <a href="#!">Пробіотики</a>
+                            <a href="#!">Протигрибкові препарати</a>
+                            <a href="#!">Протиблювотні препарати</a>
+                            <a href="#!">Седативні препарати (заспокійливі)</a>
+                            <a href="#!">Сорбенти</a>
+                            <a href="#!">Хондропротектори</a>
+                            <a href="#!">Інші вет препарати</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Собакам</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct2.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Харчування</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Для догляду та грумінгу</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Здоров’я</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg5.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Прогулянки та подорожі</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg11.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Чистота в будинку</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg7.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Все для дому</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Шампуні, косметика, гігієна</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg9.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Туалети, пелюшки, трусики</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Пеленки</a>
+                            <a href="#!">Засоби для догляду</a>
+                            <a href="#!">Для зубів і пасти</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg10.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Гардероб</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Пеленки</a>
+                            <a href="#!">Засоби для догляду</a>
+                            <a href="#!">Для зубів і пасти</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg3.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Ігри та дресирування</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Котам</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct3.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Харчування</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Для догляду та грумінгу</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Здоров’я</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg5.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Прогулянки та подорожі</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg7.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Все для дому</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Шампуні, косметика, гігієна</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/kt1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Наповнювачі та туалети</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Пеленки</a>
+                            <a href="#!">Засоби для догляду</a>
+                            <a href="#!">Для зубів і пасти</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg3.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Ігри та розваги</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Гризуни</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct4.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Харчування</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Для догляду та грумінгу</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Здоров’я</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/gr1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Клітки та аксесуари</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Догляд та гігієна</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Птахи</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct5.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/pt1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Корм</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Здоров’я</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Догляд та гігієна</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/pt2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Клітки та аксесуари</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Риби, риптилії</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct6.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Корм</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Ліки та вітаміни</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Обладнання для акваріума</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb3.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Акваріум</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Оформлення акваріума</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb5.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Хімія та добрива</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb7.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Аксесуари для акваріумів</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/rb8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Тераріум</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Тхорі</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct7.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Корм</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg4.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Здоров’я</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Догляд та гігієна</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/pt2.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Клітки та аксесуари</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-categories js-acc-m">
+                <button class="m-category js-open-acc-m">
+                    <span class="m-category__title">Коні</span>
+                    <span class="m-category__img">
+                             <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/ct8.webp" alt="" width="120" height="76">
+                        </span>
+                    <span class="m-category__icon">
+                            <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                        </span>
+                </button>
+                <div class="menu-categories__body js-acc-wrap js-acc-block-m">
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Кормові добавки</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                            <a href="#!">Лежаки, матраси, килимки та будиночки</a>
+                            <a href="#!">Видалення запахів, плям та шерсті</a>
+                            <a href="#!">Вітаміни та добавки</a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/dogs/dg8.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Шампуні для коней</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Наповнювачі та підстилки</a>
+                            <a href="#!">Косметика</a>
+                            <a href="#!">Видалення запаху, плям та шерсті </a>
+                        </div>
+                    </div>
+                    <div class="menu-categories__acc js-acc">
+                        <button class="categ-item categ-item--mob js-open-acc">
+                            <span class="categ-item__icon">
+                                 <img src="/images/empty.gif" class="lazy" data-src="images/icons/categs/kn1.svg" alt="" width="32" height="32">
+                            </span>
+                            <span class="categ-item__text">Креми та гелі для коней</span>
+                            <span class="categ-item__arr">
+                                <img src="/images/empty.gif" class="lazy" data-src="images/icons/mob-categs/arr.svg" alt="" width="24" height="24">
+                            </span>
+                        </button>
+                        <div class="categ-list categ-list--mob js-acc-block">
+                            <a href="#!">Сухий корм</a>
+                            <a href="#!">Аксесуари, совки, пакети для лотка</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1372,13 +2306,6 @@
 </footer>
 <!-- footer End-->
 
-    <!--lazy-load-->
-    <script defer src="js/modules/lozad.min.js"></script>
-    <!--acc-categories-->
-    <script defer src="js/acc-categories.js"></script>
-    <!--lazy-load-->
-    <script defer src="js/modules/micromodal.js"></script>
-    <!--common-->
-    <script defer src="js/common.js"></script>
+    <script defer src="js/bundle.js?v=21"></script>
 </body>
 </html>

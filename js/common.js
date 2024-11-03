@@ -1,42 +1,58 @@
 import lozad from './modules/lozad.min.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
-	document.body.classList.add('loading');
-
 	// lazy-load
 	const el = document.querySelectorAll('.lazy');
 	window.observer = lozad(el);
 	window.observer.observe();
 
+	const header = document.querySelector('.js-header');
+	const categoriesMenu = document.querySelector('.js-categories-menu');
+	const categoriesBlocks = document.querySelectorAll('.js-categories-block');
+	const headerElement = document.querySelector('.header');
+	const headerHeight = header.offsetHeight;
 
-	window.addEventListener('scroll', function () {
-		if (window.scrollY > 50 && window.innerWidth > 1279) {
-			const categoriesMenu = document.querySelector('.js-categories-menu');
+	function throttle(func, limit) {
+		let lastFunc;
+		let lastRan;
+		return function (...args) {
+			if (!lastRan) {
+				func.apply(this, args);
+				lastRan = Date.now();
+			} else {
+				clearTimeout(lastFunc);
+				lastFunc = setTimeout(() => {
+					if ((Date.now() - lastRan) >= limit) {
+						func.apply(this, args);
+						lastRan = Date.now();
+					}
+				}, limit - (Date.now() - lastRan));
+			}
+		};
+	}
+	const handleScroll = throttle(function () {
+		const scrollY = window.scrollY;
+
+		if (scrollY > 50 && window.innerWidth > 1279) {
 			categoriesMenu.classList.remove('show');
-			document.querySelectorAll('.js-categories-block').forEach(block => block.classList.remove('show'));
+			categoriesBlocks.forEach(block => block.classList.remove('show'));
 
 			setTimeout(() => {
-				document.querySelectorAll('.js-categories-block').forEach(block => block.classList.remove('block'));
-			}, 100)
+				categoriesBlocks.forEach(block => block.classList.remove('block'));
+			}, 100);
 		}
-	});
 
-	window.addEventListener('scroll', function () {
-		if (window.scrollY > document.querySelector('.js-header').offsetHeight) {
-			document.querySelector('.header').classList.add('scroll');
+		if (scrollY > headerHeight) {
+			headerElement.classList.add('scroll');
 		} else {
-			document.querySelector('.header').classList.remove('scroll');
+			headerElement.classList.remove('scroll');
 		}
-	});
+	}, 100);
 
-	if (window.scrollY > document.querySelector('.js-header').offsetHeight) {
-		document.querySelector('.header').classList.add('scroll');
-	} else {
-		document.querySelector('.header').classList.remove('scroll');
-	}
+	window.addEventListener('scroll', handleScroll);
+
 
 	// inview
-
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
@@ -47,112 +63,74 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	});
 	document.querySelectorAll('.js-inview').forEach(el => observer.observe(el));
 
-	// acc
 	document.addEventListener('click', (event) => {
-		const button = event.target.closest('.js-open-acc');
+		const button = event.target.closest('.js-open-acc, .js-open-acc-m');
 		if (!button) return;
 
-		const parentWrap = button.closest('.js-acc-wrap');
-		const parentAcc = button.closest('.js-acc');
-		const contentsItem = parentAcc.querySelector('.js-acc-block');
+		const isMobileAcc = button.classList.contains('js-open-acc-m');
+		const parentAcc = button.closest(isMobileAcc ? '.js-acc-m' : '.js-acc');
+		const accBlock = parentAcc.querySelector(isMobileAcc ? '.js-acc-block-m' : '.js-acc-block');
+		const parentWrap = button.closest(isMobileAcc ? '.js-acc-wrap-m' : '.js-acc-wrap');
 		const mobileMenuBody = document.querySelector('.mobile-menu__body');
+		const activeClass = isMobileAcc ? 'active-m' : 'active';
 
-		if (parentAcc.classList.contains('active')) {
-			contentsItem.style.maxHeight = '0';
-			parentAcc.classList.remove('active');
-
-			if (parentAcc.classList.contains('promo-block')) {
-				parentAcc.querySelector('input').value = '';
+		function updateParentMaxHeight(element) {
+			while (element) {
+				if (element.classList.contains('js-acc-block-m')) {
+					element.style.maxHeight = '0';
+					const scrollHeight = element.scrollHeight;
+					element.style.maxHeight = `${scrollHeight}px`;
+				}
+				element = element.parentElement.closest('.js-acc-block-m');
 			}
-		} else {
-			const contents = parentWrap.querySelectorAll('.js-acc-block');
-			contents.forEach((block) => {
-				block.style.maxHeight = '0';
-			});
-
-			parentWrap.querySelectorAll('.js-acc').forEach((parentItem) => {
-				parentItem.classList.remove('active');
-			});
-
-			contentsItem.style.maxHeight = contentsItem.scrollHeight + "px";
-			parentAcc.classList.add('active');
-
-			// Ждем, пока аккордеон откроется, а затем прокручиваем
-			setTimeout(() => {
-				// Прокрутка к открытому аккордеону
-				const parentAccPosition = parentAcc.getBoundingClientRect().top + window.scrollY;
-				const mobileMenuBodyTop = mobileMenuBody.getBoundingClientRect().top + window.scrollY;
-				const scrollToPosition = parentAccPosition - mobileMenuBodyTop + mobileMenuBody.scrollTop;
-
-				mobileMenuBody.scrollTo({
-					top: scrollToPosition - 20,
-					behavior: 'smooth'
-				});
-			}, 300); // Ждем 300 миллисекунд
 		}
 
-		parentWrap.style.maxHeight = 'initial';
-	});
-
-	// acc-sec
-	document.addEventListener('click', (event) => {
-		const button = event.target.closest('.js-open-acc-m');
-		if (!button) return;
-
-		const parentAcc = button.closest('.js-acc-m');
-		const accBlock = parentAcc.querySelector('.js-acc-block-m');
-		const allAccBlocks = button.closest('.js-acc-wrap-m').querySelectorAll('.js-acc-block-m');
-		const mobileMenuBody = document.querySelector('.mobile-menu__body');
-
-		let isAnimating = false;
-
-		if (parentAcc.classList.contains('active-m')) {
-			const currentHeight = accBlock.scrollHeight;
-			accBlock.style.maxHeight = currentHeight + "px";
-
-			setTimeout(() => {
+		if (parentAcc.classList.contains(activeClass)) {
+			accBlock.style.maxHeight = `${accBlock.scrollHeight}px`;
+			requestAnimationFrame(() => {
+				accBlock.style.transition = 'max-height 0.3s ease';
 				accBlock.style.maxHeight = '0';
-				parentAcc.classList.remove('active-m');
-			}, 10);
+				parentAcc.classList.remove(activeClass);
+			});
+			accBlock.addEventListener('transitionend', () => {
+				accBlock.style.transition = '';
+				updateParentMaxHeight(parentAcc.closest('.js-acc-block-m'));
+			}, { once: true });
 
+			if (!isMobileAcc && parentAcc.classList.contains('promo-block')) {
+				parentAcc.querySelector('input').value = '';
+			}
 			return;
 		}
 
-		allAccBlocks.forEach((block) => {
-			block.style.maxHeight = '0';
-		});
-		button.closest('.js-acc-wrap-m').querySelectorAll('.js-acc-m').forEach((item) => {
-			item.classList.remove('active-m');
-		});
+		parentWrap.querySelectorAll(isMobileAcc ? '.js-acc-m' : '.js-acc').forEach((item) => item.classList.remove(activeClass));
+		parentWrap.querySelectorAll(isMobileAcc ? '.js-acc-block-m' : '.js-acc-block').forEach((block) => (block.style.maxHeight = '0'));
 
-		const wrapperHeight = button.closest('.js-acc-wrap-m').offsetHeight;
-		mobileMenuBody.style.height = `${wrapperHeight}px`;
-
-		const scrollTopBefore = mobileMenuBody.scrollTop;
+		accBlock.style.maxHeight = `${accBlock.scrollHeight}px`;
+		parentAcc.classList.add(activeClass);
 
 		setTimeout(() => {
-			accBlock.style.maxHeight = accBlock.scrollHeight + "px";
-			parentAcc.classList.add('active-m');
-			isAnimating = true;
+			const scrollToPosition = parentAcc.getBoundingClientRect().top + mobileMenuBody.scrollTop - mobileMenuBody.getBoundingClientRect().top;
 
-			setTimeout(() => {
-				const parentAccPosition = parentAcc.getBoundingClientRect().top + window.scrollY;
-				const mobileMenuBodyTop = mobileMenuBody.getBoundingClientRect().top + window.scrollY;
-				const scrollToPosition = parentAccPosition - mobileMenuBodyTop + scrollTopBefore;
+			mobileMenuBody.scrollTo({
+				top: scrollToPosition - 20,
+				behavior: 'smooth'
+			});
+			if (isMobileAcc) mobileMenuBody.style.height = `${parentWrap.offsetHeight}px`;
 
-				requestAnimationFrame(() => {
-					mobileMenuBody.scrollTo({
-						top: scrollToPosition,
-						behavior: 'smooth'
-					});
-				});
+			accBlock.addEventListener('transitionend', () => {
+				updateParentMaxHeight(parentAcc.closest('.js-acc-block-m'));
 
-				mobileMenuBody.style.height = 'auto';
-				isAnimating = false;
-			}, 300);
+				setTimeout(() => {
+					updateParentMaxHeight(parentAcc.closest('.js-acc-block-m'));
+					if (isMobileAcc) mobileMenuBody.style.height = 'auto';
+				}, 100);
+			}, { once: true });
 
 		}, 300);
 	});
+
+
 
 	// call-dropdowns
 	let callTriggers = document.querySelectorAll('.js-trigger-drop');
@@ -449,7 +427,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		})
 	}
 
-
 	document.addEventListener('click', (event) => {
 		const priceCart = event.target.closest('.js-price-cart');
 
@@ -527,22 +504,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		});
 	});
 
-	// fetch categs
-
-	if(window.innerWidth > 1279) {
-		fetch('categories.html')
-		.then(response => response.text())
-		.then(data => {
-			document.querySelector('.js-append-categories').innerHTML = data;
-		})
-		.catch(error => console.error('Ошибка загрузки данных:', error));
-	} else {
-		// fetcj mobcategs
-		fetch('categories-mob.html')
-		.then(response => response.text())
-		.then(data => {
-			document.querySelector('.js-append-after').insertAdjacentHTML('afterend', data);
-		})
-		.catch(error => console.error('Ошибка загрузки данных:', error));
-	}
 });
